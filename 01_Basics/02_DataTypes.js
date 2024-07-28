@@ -17,5 +17,5 @@ let Me1=null
 // object
 
 console.log(typeof(name))      //Type is String
-console.log(typeof(Me))        //Undefined
+console.log(typeof(Me))        //Undefined is the type
 console.log(typeof(Me1))       //The type of Null is Object
