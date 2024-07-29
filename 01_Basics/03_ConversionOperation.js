@@ -35,3 +35,23 @@ let valueMe3=Number(Me3)
 // console.log(typeof valueMe3);
 // console.log(valueMe3);          //if true than 1 and if false then 0
                                 // true => 1    false =>0
+
+
+
+
+
+
+//         ********************   Operations   *************************
+
+let str1="Vishu"
+let str2=" Sharma"
+let str3= str1+ str2
+console.log(str3);
+
+
+console.log("1"+1+2)
+
+console.log(1+2+"1");
+
+
+
