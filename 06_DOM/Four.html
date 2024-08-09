@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <ul class="Language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    const Lang=document.querySelector('.Language')
+
+    function AddLanguage(LangName){      //fucntion for Add an element in the ul as li
+        const li=document.createElement('li')
+        li.innerHTML=LangName
+        Lang.appendChild(li)
+    }
+
+    AddLanguage("JAVA")
+    AddLanguage("Python")
+
+
+    function AddOptiLanguage(LangName){     //Optimized
+    const li=document.createElement('li')
+    li.appendChild(document.createTextNode(LangName))
+    Lang.appendChild(li)
+    }
+
+    AddOptiLanguage("GO Lang")
+
+    //Edit
+    const Second=document.querySelector('li:nth-child(3)')
+    // Second.innerHTML="MOJO"
+    
+    const newli=document.createElement('li')  //Creating a new Element
+    newli.textContent="MOJO"    //Adding the Value in new Element
+    Second.replaceWith(newli)     //replace the current element with new element
+
+
+    //edit
+    const One=document.querySelector('li:first-child')
+    One.outerHTML='<li>TypeScript</li>'
+
+    //Remove
+    const last=document.querySelector("li:last-child")
+    last.remove()
+</script>
+</html>
