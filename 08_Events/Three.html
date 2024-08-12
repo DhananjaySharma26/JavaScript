@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Vishu Sharma</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+
+    
+</body>
+<script>
+
+    const sayVishu= function(str){
+        console.log("Vishu");
+        console.log(str,Date.now());
+    }
+
+    const startPrinting = function(){
+        var intervalId = setInterval(sayVishu,1000,'Hi')
+    }
+
+    document.querySelector('#start').addEventListener('click',startPrinting)
+
+    document.querySelector('#stop').addEventListener('click',()=>{
+        clearInterval(intervalId)
+    })
+</script>
+</html>

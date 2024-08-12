@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Vishu Sharma</h1>
+    <button id="stop">Stop</button>
+    
+</body>
+<script>
+
+    //SetTimeOut is used to do the work for only one time after timout
+    setTimeout(() => {
+        console.log("Vishu Sharma");
+    }, 3000);
+
+
+    const Vishu= function() {
+        console.log("Vishu");
+    }
+    setTimeout(Vishu, 3000);
+
+
+
+    const Changetext= function(){
+        document.querySelector('h1').innerHTML='Dhananjay Sharma'
+    }
+    const ChangeMe = setTimeout(Changetext, 3000);
+
+    const ChangeButton = function(){
+        const btn = document.getElementById('stop')
+        btn.style.backgroundColor='green'
+        btn.style.color= 'white'
+    }
+    setTimeout(ChangeButton, 1000);
+
+    const btn = document.getElementById('stop').addEventListener('click',()=>{
+        clearTimeout(ChangeMe)
+        alert('Name Change function Stopped')
+    })
+</script>
+</html>
