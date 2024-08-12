@@ -20,7 +20,8 @@
     }
 
     const startPrinting = function(){
-        var intervalId = setInterval(sayVishu,1000,'Hi')
+         intervalId = setInterval(sayVishu,1000,'Hi')     
+               //it is created as a global variable
     }
 
     document.querySelector('#start').addEventListener('click',startPrinting)
